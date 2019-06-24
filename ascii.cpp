@@ -26,7 +26,7 @@ bool ArgumentExists(int argc, char** argv, char const* s)
 
 int main(int argc, char** argv)
 {
-	bool debug 		= (ArgumentExists(argc, argv, deb) || ArgumentExists(argc, argv, deb2));
+	bool debug 	= (ArgumentExists(argc, argv, deb) || ArgumentExists(argc, argv, deb2));
 	bool invert 	= (ArgumentExists(argc, argv, inv) || ArgumentExists(argc, argv, inv2));
 
 	if(argc < 2) cout << "usage: ascii <image> <downscale factor> [-i | --invert] [-d | --debug]" << endl;
@@ -73,14 +73,14 @@ int main(int argc, char** argv)
 			{
 				for(int x = 0; x < w; x++)
 				{
-					if		(a[x][y] > 224)		cout << "@@@";
+					if	(a[x][y] > 224)		cout << "@@@";
 					else if (a[x][y] > 192)		cout << "$$$";
 					else if (a[x][y] > 160)		cout << "###";
 					else if (a[x][y] > 128)		cout << "&&&";
 					else if (a[x][y] > 96)		cout << "***";
 					else if (a[x][y] > 64)		cout << ":::";
 					else if (a[x][y] > 32)		cout << "^^^";
-					else						cout << "...";
+					else				cout << "...";
 				}
 				cout << endl;
 			}
